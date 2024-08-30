@@ -1,101 +1,101 @@
 # Hitters Salary Prediction
 
-Bu proje, çalışanların çeşitli özelliklerine (deneyim, eğitim seviyesi, lokasyon vb.) göre maaşlarını tahmin etmeyi amaçlayan bir makine öğrenimi uygulamasıdır. Farklı model ve tekniklerin kullanıldığı bu proje, maaş tahminleri için optimize edilmiş bir model sunmayı hedeflemektedir.
+This project is a machine learning application aimed at predicting employee salaries based on various features such as experience, education level, location, etc. By using different models and techniques, the project seeks to present an optimized model for salary predictions.
 
-## İçindekiler
+## Table of Contents
 
-- [Proje Yapısı](#proje-yapısı)
-- [Özellikler](#özellikler)
-- [Kurulum](#kurulum)
-- [Kullanım](#kullanım)
-- [Sonuçlar](#sonuçlar)
-- [Katkıda Bulunma](#katkıda-bulunma)
-- [Lisans](#lisans)
-- [İletişim](#iletişim)
+- [Project Structure](#project-structure)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Results](#results)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-## Proje Yapısı
+## Project Structure
 
-- `catboost_info/`: CatBoost modeline ait bilgi ve log dosyaları.
-- `data/`: Veri setlerinin bulunduğu klasör.
-- `output/`: Proje çıktıları, sonuç dosyaları ve grafikler.
-  - `mse_comparison_plot.png`: Farklı modellerin karşılaştırma grafiği.
-  - `result.csv`: Tahmin sonuçlarının saklandığı dosya.
-- `.gitignore`: Git için gereksiz dosyaların dahil edilmemesi amacıyla kullanılan dosya.
-- `config.py`: Proje genelinde kullanılan konfigürasyon dosyası.
-- `data_loader.py`: Verilerin yüklenmesi ve işlenmesi için kullanılan yardımcı sınıflar.
-- `data_preprocessor.py`: Veri ön işleme fonksiyonları ve sınıfları.
-- `feature_selector.py`: Özellik seçimi için kullanılan kodlar.
-- `hyperparameter_tuner.py`: Hiperparametre optimizasyonu için kullanılan fonksiyonlar.
-- `main.py`: Projenin ana çalıştırma dosyası.
-- `model_trainer.py`: Model eğitimi ve değerlendirmesi için kullanılan kodlar.
-- `research.py`: Araştırma ve model denemeleri için kullanılan kodlar.
-- `visualization.py`: Verilerin ve sonuçların görselleştirilmesi için kullanılan kodlar.
+- `catboost_info/`: Information and log files related to the CatBoost model.
+- `data/`: Directory containing the datasets.
+- `output/`: Project outputs, result files, and graphs.
+  - `mse_comparison_plot.png`: Comparison plot of different models.
+  - `result.csv`: File containing the prediction results.
+- `.gitignore`: File to exclude unnecessary files from being included in Git.
+- `config.py`: Configuration file used throughout the project.
+- `data_loader.py`: Helper classes for loading and processing data.
+- `data_preprocessor.py`: Functions and classes for data preprocessing.
+- `feature_selector.py`: Code for feature selection.
+- `hyperparameter_tuner.py`: Functions for hyperparameter optimization.
+- `main.py`: Main execution file of the project.
+- `model_trainer.py`: Code for training and evaluating models.
+- `research.py`: Code for research and model experiments.
+- `visualization.py`: Code for visualizing data and results.
 
-## Özellikler
+## Features
 
-- **Veri Yükleme ve İşleme:** Verilerin yüklenmesi, ön işlenmesi ve analiz edilmesi.
-- **Özellik Seçimi:** Model için en iyi özelliklerin seçilmesi.
-- **Model Eğitimi:** CatBoost gibi çeşitli algoritmalarla model eğitimi.
-- **Hiperparametre Optimizasyonu:** Modellerin en iyi performansı göstermesi için hiperparametrelerin ayarlanması.
-- **Görselleştirme:** Model sonuçlarının grafiksel olarak sunulması.
+- **Data Loading and Processing:** Loading, preprocessing, and analyzing data.
+- **Feature Selection:** Selecting the best features for the model.
+- **Model Training:** Training models with various algorithms like CatBoost.
+- **Hyperparameter Optimization:** Adjusting hyperparameters for optimal model performance.
+- **Visualization:** Graphically presenting the model results.
 
-## Kurulum
+## Installation
 
-Projeyi çalıştırmak için aşağıdaki adımları izleyin:
+To run the project, follow these steps:
 
-### Gereksinimler
+### Requirements
 
 - Python 3.x
-- Gerekli Python paketlerini yüklemek için `requirements.txt` dosyasını kullanabilirsiniz (varsa):
+- You can use the `requirements.txt` file to install the necessary Python packages (if available):
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Çalıştırma
+### Running the Project
 
-1. Projeyi klonlayın:
+1. Clone the repository:
 
    ```bash
    git clone https://github.com/Furk4nBulut/Salary-Prediction.git
    cd Salary-Prediction
    ```
 
-2. Verileri yükleyin ve ön işleme tabi tutun:
+2. Load and preprocess the data:
 
    ```bash
    python data_preprocessor.py
    ```
 
-3. Modeli eğitin:
+3. Train the model:
 
    ```bash
    python model_trainer.py
    ```
 
-4. Sonuçları değerlendirin ve görselleştirin:
+4. Evaluate and visualize the results:
 
    ```bash
    python visualization.py
    ```
 
-## Sonuçlar
+## Results
 
-- **MSE Karşılaştırması:** Farklı modellerin performansı, `output/mse_comparison_plot.png` dosyasında görselleştirilmiştir.
-- **Tahmin Sonuçları:** Tahmin edilen maaşlar `output/result.csv` dosyasında saklanmıştır.
-![Sonuçlar](output/mse_comparison_plot.png)
+- **MSE Comparison:** The performance of different models is visualized in `output/mse_comparison_plot.png`.
+- **Prediction Results:** The predicted salaries are stored in `output/result.csv`.
+![Results](output/mse_comparison_plot.png)
 
-## Katkıda Bulunma
+## Contributing
 
-Bu projeye katkıda bulunmak isterseniz, lütfen önce bir `issue` açın. Her türlü katkı ve öneri memnuniyetle karşılanır.
+If you would like to contribute to this project, please open an `issue` first. Any contributions or suggestions are welcome.
 
-## Lisans
+## License
 
-Bu proje MIT Lisansı ile lisanslanmıştır. Detaylar için `LICENSE` dosyasına bakabilirsiniz.
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
-## İletişim
+## Contact
 
-Bu proje hakkında sorularınız varsa benimle iletişime geçebilirsiniz:
+If you have any questions about this project, feel free to reach out:
 
-- **Email:** [furkanbtng@gmail.com](mailto:furkanbng@gmail.com)
+- **Email:** [furkanbtng@gmail.com](mailto:furkanbtng@gmail.com)
 - **GitHub:** [Furk4nBulut](https://github.com/Furk4nBulut)
