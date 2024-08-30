@@ -6,7 +6,7 @@ class Config:
     OUTPUT_PATH = 'output/result.csv'
     OUTLIERS_LOWER_LIMIT = 0.35
     OUTLIERS_UPPER_LIMIT = 0.75
-    TEST_SIZE = 0.35
+    TEST_SIZE = 0.40
     RANDOM_STATE = 46
     TARGET_COLUMN = 'Salary'
     METRICS = ['MSE', 'RMSE', 'MAE', 'R2 Score']
